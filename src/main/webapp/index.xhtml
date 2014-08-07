@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="form1">
+            <h1>Index --</h1> <br></br>
+            <h:outputText style="color: blue; font-weight: bold"  value="flash.i1=   "></h:outputText>
+            <h:inputText id="i1" label="Input1:  " value="#{flash.i1}"></h:inputText><br></br><br></br>
+            <h:outputText style="color: brown; font-weight: bold"  value="setting 'flash.i2' variable using c:set; value is =incept  "></h:outputText>
+            <c:set target="#{flash}" property="i2" value="Incept"></c:set>
+            <br></br><br></br>
+            
+            <h:outputText style="color: blue; font-weight: bold"  value="flash.i3=   "></h:outputText>
+            <h:inputText id="i3" label="Input2:  " value="#{flash.i3}"></h:inputText>
+            <br></br><br></br>
+            <h:commandLink action="index_1" value="Click here to go to next page .."></h:commandLink>
+            <br></br>
+            <h:commandButton value="Submit" action="#{flashExampleBean.someViewAction()}" />
+        </h:form>
+    </h:body>
+</html>
+
